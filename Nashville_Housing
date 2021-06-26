@@ -48,7 +48,7 @@ JOIN PortfolioProject.dbo.NashvilleHousing b
 Where a.PropertyAddress is null
 
 
-Update a
+Update a    --When using Join in an Update statement you need to use the alias, if you put Nashvillehousing it would give an error
 SET PropertyAddress = ISNULL(a.PropertyAddress,b.PropertyAddress)
 From PortfolioProject.dbo.NashvilleHousing a
 JOIN PortfolioProject.dbo.NashvilleHousing b
